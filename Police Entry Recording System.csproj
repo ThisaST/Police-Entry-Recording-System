@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C124159F-C86A-4122-B57C-D731333BB92B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Police_Entry_Recording_System</RootNamespace>
+    <AssemblyName>Police Entry Recording System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>96C3020DEBEFF2A9A97F5471261BDDB5835047D2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Police Entry Recording System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.DebuggerVisualizers %282010%29">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.DebuggerVisualizers (2010).dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Fuzzy">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Fuzzy.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Genetic">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Genetic.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.Formats">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Imaging.Formats.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.IPPrototyper">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Imaging.IPPrototyper.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.MachineLearning">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Neuro.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.Lego">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Robotics.Lego.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.Surveyor">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Robotics.Surveyor.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Robotics.TeRK">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Robotics.TeRK.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.FFMPEG">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.Kinect">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.Ximea">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.Ximea.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Vision">
+      <HintPath>..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\v4.5\MySql.Data.Entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin">
+      <HintPath>..\..\..\..\..\Desktop\v4.5\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\v4.5\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="edu.uok.se.project.controller\EntryDetailsDBAccess.cs" />
+    <Compile Include="edu.uok.se.project.controller\ImageDBAccess.cs" />
+    <Compile Include="edu.uok.se.project.controller\SearchEntryDetailsDBAccess.cs" />
+    <Compile Include="edu.uok.se.project.controller\UserSearchDBAccess.cs" />
+    <Compile Include="edu.uok.se.project.controller\VictimSearchDBAccess.cs" />
+    <Compile Include="edu.uok.se.project.Model\UserDetailsModel.cs" />
+    <Compile Include="edu.uok.se.project.Model\VictimModel.cs" />
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.courtcase\CourtCaseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.courtcase\CourtCaseDetails.Designer.cs">
+      <DependentUpon>CourtCaseDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.entrydescription\EntryDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.entrydescription\EntryDescription.Designer.cs">
+      <DependentUpon>EntryDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.entry\Entry_Acess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.entry\Entry_Acess.Designer.cs">
+      <DependentUpon>Entry_Acess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.entry\Entry_Details_updated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.entry\Entry_Details_updated.Designer.cs">
+      <DependentUpon>Entry_Details_updated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.evidence\EvidenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.evidence\EvidenceForm.Designer.cs">
+      <DependentUpon>EvidenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.parentform\Parent_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.parentform\Parent_Form.Designer.cs">
+      <DependentUpon>Parent_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\CreatingBreport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreatingBreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\DisplayBReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\DisplayBReport.Designer.cs">
+      <DependentUpon>DisplayBReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.search\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.search\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.suspects\EntrySuspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.suspects\EntrySuspect.Designer.cs">
+      <DependentUpon>EntrySuspect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.suspects\SuspectDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.suspects\SuspectDetails.Designer.cs">
+      <DependentUpon>SuspectDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.user\NewUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.user\NewUsers.Designer.cs">
+      <DependentUpon>NewUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.login\Login_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.login\Login_Page.Designer.cs">
+      <DependentUpon>Login_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.user\UserImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.user\UserImage.Designer.cs">
+      <DependentUpon>UserImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.victim\Victim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.victim\Victim.Designer.cs">
+      <DependentUpon>Victim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.webcam\WebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.webcam\WebCam.Designer.cs">
+      <DependentUpon>WebCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.witness\WitnessDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edu.uok.se.project.view\edu.uok.se.project.view.witness\WitnessDetails.Designer.cs">
+      <DependentUpon>WitnessDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryDBDataSet.cs">
+      <DependentUpon>EntryDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntryDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntryDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="EntryDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntryDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntryRecordingDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntryRecordingDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="edu.uok.se.project.Model\UserLogin.cs" />
+    <Compile Include="edu.uok.se.project.controller\UserLoginDatabaseAccess.cs" />
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.courtcase\CourtCaseDetails.resx">
+      <DependentUpon>CourtCaseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.entrydescription\EntryDescription.resx">
+      <DependentUpon>EntryDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.entry\Entry_Acess.resx">
+      <DependentUpon>Entry_Acess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.entry\Entry_Details_updated.resx">
+      <DependentUpon>Entry_Details_updated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.evidence\EvidenceForm.resx">
+      <DependentUpon>EvidenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.parentform\Parent_Form.resx">
+      <DependentUpon>Parent_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\CreatingBreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CreatingBreport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\DisplayBReport.resx">
+      <DependentUpon>DisplayBReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.reports\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.search\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.suspects\EntrySuspect.resx">
+      <DependentUpon>EntrySuspect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.suspects\SuspectDetails.resx">
+      <DependentUpon>SuspectDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.user\NewUsers.resx">
+      <DependentUpon>NewUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.login\Login_Page.resx">
+      <DependentUpon>Login_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.user\UserImage.resx">
+      <DependentUpon>UserImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.victim\Victim.resx">
+      <DependentUpon>Victim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.webcam\WebCam.resx">
+      <DependentUpon>WebCam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edu.uok.se.project.view\edu.uok.se.project.view.witness\WitnessDetails.resx">
+      <DependentUpon>WitnessDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="EntryDBDataSet.xsc">
+      <DependentUpon>EntryDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="EntryDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntryDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="EntryDBDataSet.xss">
+      <DependentUpon>EntryDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="EntryDBDataSet1.xsc">
+      <DependentUpon>EntryDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EntryDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntryDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EntryDBDataSet1.xss">
+      <DependentUpon>EntryDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EntryRecordingDBDataSet.xsc">
+      <DependentUpon>EntryRecordingDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EntryRecordingDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntryRecordingDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EntryRecordingDBDataSet.xss">
+      <DependentUpon>EntryRecordingDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Police Entry Recording System_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\EntryDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\EntryDB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>EntryDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Database\EntryRecordingDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\EntryRecordingDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>EntryRecordingDB.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Add_Entry.jpg" />
+    <None Include="Resources\Add_New_User.jpg" />
+    <None Include="Resources\Actions-contact-new-icon.png" />
+    <None Include="Resources\Add-Folder-icon.png" />
+    <None Include="Resources\1468764311_add-user.png" />
+    <None Include="Resources\1468764647_cancel.png" />
+    <None Include="Resources\1468764625_search.png" />
+    <None Include="Resources\1468832922_Camera.png" />
+    <None Include="Resources\1468764270_save.png" />
+    <None Include="Resources\1469032714_home.png" />
+    <None Include="Resources\1469032685_close.png" />
+    <None Include="Resources\1469052383_gnome-session-logout.png" />
+    <Content Include="Resources\AfterLogin22.png" />
+    <None Include="Resources\Login_Image.jpg" />
+    <None Include="Resources\Background_Tile_User.jpg" />
+    <None Include="Resources\Back.jpg" />
+    <None Include="Resources\back2.jpg" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-7-Save-as.ico" />
+    <None Include="Resources\entry.jpg" />
+    <None Include="Resources\court_case.jpg" />
+    <None Include="Resources\loading_circle_fully_working_by_assasinna-d5xfzgb.gif" />
+    <None Include="Resources\Blue-gradient-Wallpaper-1080p.png" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\background-texture-gradient-light-daAcdhd-wallpaper.jpg" />
+    <Content Include="Resources\login_page.jpg" />
+    <None Include="Resources\New_User_Image.png" />
+    <None Include="Resources\new_user.jpg" />
+    <None Include="Resources\Reports.jpg" />
+    <None Include="Resources\search_entry.jpg" />
+    <None Include="Resources\Purple-Solid-Color-Bright-Gradient-Background-Wallpapers.jpg" />
+    <None Include="Resources\texture-gradient-awesome-full-hd-wallpaper-6ldp35o4.jpg" />
+    <None Include="Resources\tk2j9LI.jpg" />
+    <None Include="Resources\tk2j9LI1.jpg" />
+    <None Include="Resources\texture-gradient-awesome-full-hd-wallpaper-6ldp35o41.jpg" />
+    <None Include="Resources\Sri_Lanka_Police_logo.svg.png" />
+    <None Include="Resources\new back.jpg" />
+    <None Include="Resources\thumb-350-688200.jpg" />
+    <None Include="Resources\security_codes-t3.jpg" />
+    <None Include="Resources\security_codes-t31.jpg" />
+    <Content Include="Resources\User_Main.png" />
+    <None Include="Resources\User_Main1.png" />
+    <None Include="Resources\male_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
